@@ -1,0 +1,132 @@
+/* Political Dossier: shared styles */
+  :root{
+    --night:#101827;
+    --night-2:#18233A;
+    --parchment:#ECE3CD;
+    --star:#F1E9D6;
+    --star-muted:#D3C9B2;
+    --ink:#1C1A16;
+    --ink-muted:#463F33;
+    --gold:#D2AB5F;
+    --rubric:#9A3722;
+    --display:'EB Garamond', Georgia, serif;
+    --label:'Cinzel', 'Trajan Pro', serif;
+    --body:'Spectral', Georgia, serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--night);color:var(--star);font-family:var(--body);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1320px;margin:0 auto}
+  .label{font-family:var(--label);font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+
+  /* ---------- Nav ---------- */
+  header.hero{padding:28px 40px 56px}
+  nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:17px;color:var(--star)}
+  .navlinks{display:flex;flex-wrap:wrap;gap:32px;font-size:14px}
+  .navlinks a{text-decoration:none;padding:12px 0;color:var(--star);border-bottom:1px solid transparent}
+  .navlinks a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold)}
+  .navlinks a:hover,.navlinks a:focus-visible{border-bottom-color:var(--gold);color:var(--gold)}
+
+  /* ---------- Hero ---------- */
+  .plate-frame{border:3px double rgba(241,233,214,.5);padding:64px 56px 52px;display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+  .hero-copy{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:26px}
+  h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(64px,8.4vw,124px);line-height:.9;letter-spacing:-.015em;color:var(--star)}
+  h1 em{font-style:italic;font-weight:600;color:var(--gold)}
+  .lede{margin:0;font-size:clamp(21px,1.9vw,25px);line-height:1.45;font-weight:500;color:var(--star);max-width:34ch}
+  .sub{margin:0;font-size:19px;line-height:1.6;color:var(--star-muted);max-width:46ch}
+  .ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;min-height:50px;padding:0 26px;text-decoration:none;font-size:14px;transition:background .2s,color .2s,border-color .2s}
+  .btn-gold{background:var(--gold);color:var(--night)}
+  .btn-gold:hover,.btn-gold:focus-visible{background:var(--star)}
+  .btn-line{border:1px solid rgba(241,233,214,.6);color:var(--star)}
+  .btn-line:hover,.btn-line:focus-visible{border-color:var(--gold);color:var(--gold)}
+  figure.orrery{flex:1 1 420px;min-width:0;margin:0;display:flex;flex-direction:column;align-items:center;gap:14px}
+  figure.orrery svg{width:100%;max-width:540px;display:block}
+  figcaption{font-size:13px;color:var(--star-muted)}
+
+  /* ---------- Plates ---------- */
+  #plates{background:var(--parchment);color:var(--ink);padding:96px 40px 104px}
+  .plates-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;border-bottom:2px solid var(--ink);padding-bottom:28px;margin-bottom:48px}
+  .plates-head .kicker{font-size:14px;color:var(--rubric);margin-bottom:12px}
+  h2{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(40px,4.6vw,64px);line-height:1}
+  h2 em{font-weight:600}
+  .plates-head p{margin:0;flex:0 1 380px;font-size:18px;line-height:1.55;color:var(--ink-muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,500px),1fr));gap:24px}
+
+  .plate{display:flex;flex-direction:column;gap:18px;padding:34px;min-height:420px;border:1.5px solid var(--ink);text-decoration:none;color:var(--ink);background:transparent;transition:background .25s ease,color .25s ease}
+  .plate .meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:13px}
+  .plate .num{color:var(--rubric);transition:color .25s}
+  .plate .tag{color:var(--ink-muted);transition:color .25s}
+  .plate h3{margin:0;font-family:var(--display);font-weight:700;font-size:42px;line-height:1.02}
+  .plate p{margin:0;font-size:19px;line-height:1.55;color:var(--ink-muted);transition:color .25s}
+  .plate .window{margin-top:auto;border-top:1px solid rgba(28,26,22,.35);padding-top:16px;height:196px;display:flex;flex-direction:column;justify-content:center;transition:border-color .25s}
+  .plate .idle{display:flex;align-items:center;gap:16px;font-size:16px;font-weight:500;color:var(--ink-muted)}
+  .plate .preview{display:none;flex-direction:column;gap:10px}
+  .plate .preview svg{width:100%;height:136px;display:block}
+  .plate .enter{font-family:var(--label);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+
+  .plate:hover,.plate:focus-visible{background:var(--night);color:var(--star);outline:none}
+  .plate:focus-visible{box-shadow:0 0 0 3px var(--gold)}
+  .plate:hover .num,.plate:focus-visible .num{color:var(--gold)}
+  .plate:hover .tag,.plate:hover p,.plate:focus-visible .tag,.plate:focus-visible p{color:var(--star-muted)}
+  .plate:hover .window,.plate:focus-visible .window{border-top-color:rgba(241,233,214,.25)}
+  .plate:hover .idle,.plate:focus-visible .idle{display:none}
+  .plate:hover .preview,.plate:focus-visible .preview{display:flex}
+
+  /* Touch screens can't hover: show the preview by default */
+  @media (hover:none){
+    .plate .idle{display:none}
+    .plate .preview{display:flex}
+    .plate{background:var(--night);color:var(--star)}
+    .plate .num{color:var(--gold)}
+    .plate .tag,.plate p{color:var(--star-muted)}
+    .plate .window{border-top-color:rgba(241,233,214,.25)}
+  }
+
+  /* SVG text */
+  .sc{font-family:var(--label);font-weight:600;letter-spacing:1.5px}
+  .num-t{font-family:var(--body);font-weight:500}
+
+  /* ---------- Footer ---------- */
+  footer{padding:40px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:15px;color:var(--star-muted)}
+  footer .label{font-size:13px;color:var(--star)}
+
+  @media (max-width:640px){
+    header.hero{padding:20px 20px 40px}
+    .plate-frame{padding:36px 24px}
+    #plates{padding:64px 20px 72px}
+    .plate{padding:24px;min-height:0}
+    .plate h3{font-size:34px}
+    footer{padding:32px 20px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ---------- Tool pages (the plates) ---------- */
+.plate-header{padding:28px 40px 0}
+.crumb{font-size:13px;color:var(--star-muted);margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--star-muted)}
+.crumb a:hover,.crumb a:focus-visible{color:var(--gold)}
+.plate-title{border:3px double rgba(241,233,214,.5);border-bottom:none;padding:48px 56px 40px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px}
+.plate-title .num{font-size:14px;color:var(--gold);margin-bottom:14px}
+.plate-title h1{font-size:clamp(48px,6vw,84px);line-height:.95}
+.plate-title p{margin:16px 0 0;font-size:19px;color:var(--star-muted);max-width:52ch}
+.plate-title .tag{font-size:13px;color:var(--star-muted);border:1px solid rgba(241,233,214,.4);padding:8px 14px}
+main.tool{background:var(--parchment);color:var(--ink);padding:56px 40px 80px;min-height:50vh}
+.tool-slot{border:1.5px solid var(--ink);padding:56px 40px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.tool-slot h2{font-size:clamp(28px,3vw,40px)}
+.tool-slot p{margin:0;color:var(--ink-muted);max-width:48ch}
+.plate-nav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:40px;border-top:2px solid var(--ink);padding-top:24px}
+.plate-nav a{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink);min-height:44px}
+.plate-nav a:last-child{text-align:right;margin-left:auto}
+.plate-nav .label{font-size:12px;color:var(--rubric)}
+.plate-nav .t{font-family:var(--display);font-weight:700;font-size:24px}
+.plate-nav a:hover .t,.plate-nav a:focus-visible .t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+@media (max-width:640px){
+  .plate-header{padding:20px 20px 0}
+  .plate-title{padding:32px 24px 28px}
+  main.tool{padding:40px 20px 56px}
+  .tool-slot{padding:40px 20px}
+}

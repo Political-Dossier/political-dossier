@@ -1,0 +1,30 @@
+/* Political Dossier: shared top bar and footer for the tool pages.
+   Every rule is prefixed dz- so it never collides with a tool's own styles. */
+.dz-bar,.dz-foot{background:#101827;color:#F1E9D6;font-family:'Spectral',Georgia,serif;-webkit-font-smoothing:antialiased}
+.dz-bar *,.dz-foot *{box-sizing:border-box}
+.dz-in{max-width:1320px;margin:0 auto;padding:0 32px}
+.dz-bar .dz-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 24px;min-height:64px;padding-top:8px;padding-bottom:8px}
+.dz-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#F1E9D6;font-family:'Cinzel',serif;font-weight:600;font-size:16px;letter-spacing:.12em;text-transform:uppercase}
+.dz-brand:hover,.dz-brand:focus-visible{color:#D2AB5F}
+.dz-links{display:flex;flex-wrap:wrap;gap:4px 26px;font-family:'Cinzel',serif;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.dz-links a{color:#F1E9D6;text-decoration:none;padding:10px 0;border-bottom:1px solid transparent}
+.dz-links a:hover,.dz-links a:focus-visible,.dz-links a[aria-current="page"]{color:#D2AB5F;border-bottom-color:#D2AB5F}
+.dz-bar a:focus-visible,.dz-foot a:focus-visible{outline:2px solid #D2AB5F;outline-offset:3px}
+
+.dz-foot{padding:40px 0 36px;margin-top:0}
+.dz-pn{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding-bottom:28px;border-bottom:1px solid rgba(241,233,214,.25)}
+.dz-pn a{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:#F1E9D6;min-height:44px}
+.dz-pn a:last-child{text-align:right;margin-left:auto}
+.dz-k{font-family:'Cinzel',serif;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#D2AB5F}
+.dz-t{font-family:'EB Garamond',Georgia,serif;font-weight:700;font-size:26px;line-height:1.1}
+.dz-pn a:hover .dz-t,.dz-pn a:focus-visible .dz-t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.dz-colo{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:22px;font-size:15px;color:#D3C9B2}
+.dz-colo .dz-k{color:#F1E9D6}
+.dz-colo a{color:#D3C9B2}
+.dz-colo a:hover{color:#D2AB5F}
+
+@media (max-width:640px){
+  .dz-in{padding:0 18px}
+  .dz-links{gap:2px 18px;font-size:12px}
+  .dz-t{font-size:22px}
+}

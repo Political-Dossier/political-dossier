@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beyond the Two Parties &middot; Political Dossier</title>
+<meta name="description" content="Independent and third-party candidates posting notable results in the Nov. 3, 2026 races.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/chrome.css">
+<link rel="stylesheet" href="races.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<div class="dz-bar">
+  <div class="dz-in">
+    <a class="dz-brand" href="../"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 0 L10.6 7.4 L18 9 L10.6 10.6 L9 18 L7.4 10.6 L0 9 L7.4 7.4 Z" fill="#D2AB5F"/></svg> Political Dossier</a>
+    <div class="dz-links" role="navigation" aria-label="Plates">
+      <a href="../dark-horse/">Dark Horse</a>
+      <a href="../think-tanks/">Think Tanks</a>
+      <a href="../third-party/" aria-current="page">Third Parties</a>
+      <a href="../drafts/">Drafts</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <header>
+    <h1>Beyond the Two Parties</h1>
+    <p>Independent and third-party candidates posting notable results in Nov. 3, 2026 races for U.S. Senate, U.S. House, governor and state legislature. Nonpartisan offices excluded. Results are partial and unofficial.</p>
+    <div class="status">
+      <span>Data last checked</span>
+      <span><b id="checked">loading…</b></span>
+      <span id="checknote"></span>
+    </div>
+  </header>
+
+  <div class="controls" role="group" aria-label="Filters">
+    <span class="ctl-label">Threshold</span>
+    <div class="seg" id="thresh">
+      <button type="button" data-t="3" aria-pressed="false">3%</button>
+      <button type="button" data-t="5" aria-pressed="true">5%</button>
+      <button type="button" data-t="10" aria-pressed="false">10%</button>
+    </div>
+    <span class="ctl-label">Races</span>
+    <div class="seg" id="view">
+      <button type="button" data-v="all" aria-pressed="true">All</button>
+      <button type="button" data-v="three" aria-pressed="false">Three-way</button>
+      <button type="button" data-v="two" aria-pressed="false">Head-to-head</button>
+    </div>
+    <label><input type="checkbox" id="pending" checked> Include head-to-heads with no votes yet</label>
+  </div>
+
+  <div class="main">
+    <section class="mapcard" aria-label="Map of states">
+      <div class="grid" id="grid"></div>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--tile)"></i>None</span>
+        <span><i class="sw" style="background:var(--accent-1)"></i>1</span>
+        <span><i class="sw" style="background:var(--accent-2)"></i>2–4</span>
+        <span><i class="sw" style="background:var(--accent-3)"></i>5+</span>
+        <span><i class="dot"></i>Has matchups awaiting votes</span>
+      </div>
+      <div class="tip" id="tip" hidden></div>
+    </section>
+
+    <section class="ledger" aria-live="polite">
+      <div class="ledger-head">
+        <h2 id="ledgerTitle">All states</h2>
+        <button type="button" id="clear" hidden>Show all states</button>
+      </div>
+      <ul class="races" id="races"><li class="empty">Loading races…</li></ul>
+    </section>
+  </div>
+
+  <footer>Counts are a floor, not a census: not every state legislative and House race has been scanned. Head-to-heads are contests like the Nebraska Senate race (no Democrat) and Washington's top-two matchups. Use the Races switch to map them separately from three-way races. Sources: state election offices, AP via partner sites, NBC, DDHQ and state and local outlets.</footer>
+</div>
+
+<div class="dz-foot">
+  <div class="dz-in">
+    <div class="dz-pn" role="navigation" aria-label="Other plates">
+      <a href="../think-tanks/"><span class="dz-k">&larr; Plate II</span><span class="dz-t">The Policy Ecosystem Atlas</span></a>
+      <a href="../drafts/"><span class="dz-k">Plate IV &rarr;</span><span class="dz-t">The Draft Ledger</span></a>
+    </div>
+    <div class="dz-colo"><span class="dz-k">Political Dossier &middot; Kept at Seattle &middot; MMXXVI</span><a href="../">Index of Plates</a></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
