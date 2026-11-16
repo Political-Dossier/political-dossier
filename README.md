@@ -9,7 +9,7 @@ Four instruments for reading the American political sky.
 | `/` | Homepage: hero and the Index of Plates |
 | `/dark-horse/` | Plate I: The Dark Horse Tracker |
 | `/think-tanks/` | Plate II: The Policy Ecosystem Atlas |
-| `/third-party/` | Plate III: Beyond the Two Parties |
+| `/third-party/` | Plate III: Third-Party Performance |
 | `/drafts/` | Plate IV: The Draft Ledger |
 | `/assets/ledger.css` | Shared styles for every page |
 
@@ -23,7 +23,7 @@ Edit the data file to update a tool; the layout files rarely need to change.
 | --- | --- | --- |
 | Dark Horse Tracker | `dark-horse/data.js` (people, statuses, weekly updates log) | `dark-horse/app.js`, `tracker.css` |
 | Policy Ecosystem Atlas | `think-tanks/data.js` (organizations, provinces, chronology, dispatches) | `think-tanks/app.js`, `atlas.css` |
-| Beyond the Two Parties | `third-party/data/races.json`, `third-party/data/status.json` | `third-party/app.js`, `races.css` |
+| Third-Party Performance | `third-party/data/races.json`, `third-party/data/status.json` | `third-party/app.js`, `races.css` |
 
 Shared pieces: `assets/chrome.css` (top bar and footer on tool pages), `assets/ledger.css` (homepage and shell pages), `assets/vendor/d3.min.js` (d3 7.9.0, used by the Atlas).
 
