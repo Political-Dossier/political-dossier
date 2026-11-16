@@ -130,3 +130,16 @@ main.tool{background:var(--parchment);color:var(--ink);padding:56px 40px 80px;mi
   main.tool{padding:40px 20px 56px}
   .tool-slot{padding:40px 20px}
 }
+
+/* Coming-soon plate: greyed out, not clickable, no hover preview */
+.plate.soon,.plate.soon:hover{background:transparent;color:#7A7262;border-style:dashed;border-color:#9C927E;cursor:default}
+.plate.soon .num,.plate.soon .tag,.plate.soon:hover .num,.plate.soon:hover .tag{color:#7A7262}
+.plate.soon p,.plate.soon:hover p{color:#7A7262}
+.plate.soon .window,.plate.soon:hover .window{border-top-color:rgba(28,26,22,.2)}
+.plate.soon .idle,.plate.soon:hover .idle{display:flex;color:#6B6455;font-style:italic}
+@media (hover:none){
+  .plate.soon{background:transparent;color:#7A7262}
+  .plate.soon .num,.plate.soon .tag,.plate.soon p{color:#7A7262}
+  .plate.soon .idle{display:flex}
+  .plate.soon .window{border-top-color:rgba(28,26,22,.2)}
+}
