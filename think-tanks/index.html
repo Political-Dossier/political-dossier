@@ -3,8 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Policy Ecosystem Atlas &middot; Political Dossier</title>
-<meta name="description" content="A survey of the American policy territories: think tanks and advocacy groups mapped as Democratic and Republican countries and the isles between.">
+<title>Policy Ecosystem Atlas: Comparing America's Think Tanks and Policy Shops | Political Dossier</title>
+<!-- SEO -->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://politicaldossier.com/think-tanks/">
+<meta name="author" content="Ian Hanson">
+<meta name="keywords" content="think tanks, policy shops, think tank comparison, US think tanks, map of think tanks, conservative think tanks, progressive think tanks, policy organizations, advocacy groups, policy ecosystem, US politics">
+<meta name="theme-color" content="#101827">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Political Dossier">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Policy Ecosystem Atlas: Comparing America's Think Tanks and Policy Shops | Political Dossier">
+<meta property="og:description" content="An interactive atlas comparing 121 U.S. think tanks and policy shops, mapped by party, faction and influence, with donor networks, disputed borders and the gaps between them.">
+<meta property="og:url" content="https://politicaldossier.com/think-tanks/">
+<meta property="og:image" content="https://politicaldossier.com/assets/social/think-tanks.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Policy Ecosystem Atlas: think tanks mapped as Democratic and Republican countries">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Policy Ecosystem Atlas: Comparing America's Think Tanks and Policy Shops | Political Dossier">
+<meta name="twitter:description" content="An interactive atlas comparing 121 U.S. think tanks and policy shops, mapped by party, faction and influence, with donor networks, disputed borders and the gaps between them.">
+<meta name="twitter:image" content="https://politicaldossier.com/assets/social/think-tanks.jpg">
+<meta name="twitter:image:alt" content="The Policy Ecosystem Atlas: think tanks mapped as Democratic and Republican countries">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Dataset",
+ "name": "The Policy Ecosystem Atlas",
+ "url": "https://politicaldossier.com/think-tanks/",
+ "description": "An interactive atlas comparing 121 U.S. think tanks and policy shops, mapped by party, faction and influence, with donor networks, disputed borders and the gaps between them.",
+ "isPartOf": {
+  "@type": "WebSite",
+  "@id": "https://politicaldossier.com/#website",
+  "name": "Political Dossier",
+  "url": "https://politicaldossier.com/"
+ },
+ "creator": {
+  "@type": "Person",
+  "name": "Ian Hanson",
+  "url": "https://ianhanson.com"
+ },
+ "inLanguage": "en-US",
+ "keywords": [
+  "think tanks",
+  "policy shops",
+  "advocacy groups",
+  "US politics"
+ ],
+ "spatialCoverage": "United States",
+ "isAccessibleForFree": true
+}
+</script>
+<!-- /SEO -->
+<meta name="description" content="An interactive atlas comparing 121 U.S. think tanks and policy shops, mapped by party, faction and influence, with donor networks, disputed borders and the gaps between them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -32,7 +83,12 @@
       <p class="sub">The Democratic &amp; Republican Countries and the Isles Between</p>
       <div class="rule caps" style="font-size:13px;letter-spacing:.3em">✦</div>
       <p class="imprint">Showing 121 organizations in 30 provinces, with their influence, allegiances and disputed borders. Surveyed November 15, 2026.</p>
+      <p class="compare">A side-by-side comparison of America's think tanks and policy shops: who they serve, how much sway they hold, and where they part ways.</p>
     </div>
+    <a class="scrollcue" href="#steps">
+      <span class="caps">Scroll to read the survey</span>
+      <svg width="22" height="28" viewBox="0 0 22 28" aria-hidden="true"><path d="M11 2 V24 M3 16 L11 25 L19 16" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    </a>
   </div>
 </header>
 <nav class="contents" aria-label="Plates">
@@ -230,6 +286,11 @@
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Survey entry"></aside>
 
+<a class="jumpmap" id="jumpmap" href="#map" hidden>
+  <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M2 6 L9 3 L17 6 L24 3 V20 L17 23 L9 20 L2 23 Z M9 3 V20 M17 6 V23" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+  <span><b>Jump to the map</b><small>Compare 121 think tanks &amp; policy shops</small></span>
+</a>
+
 <div class="dz-foot">
   <div class="dz-in">
     <div class="dz-pn" role="navigation" aria-label="Other plates">
@@ -242,5 +303,6 @@
 <script src="../assets/vendor/d3.min.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
+<script src="jump.js"></script>
 </body>
 </html>

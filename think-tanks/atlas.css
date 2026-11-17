@@ -282,3 +282,28 @@ body{font-size:17px}
 .cartouche h1{font-weight:700; letter-spacing:0}
 h2{font-weight:700}
 .caps,.cartouche .plate{font-weight:600}
+
+/* ===== Scroll cues and the floating map button ===== */
+.cartouche .compare{margin:10px auto 0;max-width:62ch;font-size:16.5px;line-height:1.5;color:var(--ink)}
+.scrollcue{display:flex;flex-direction:column;align-items:center;gap:6px;width:max-content;margin:18px auto 0;color:var(--muted);text-decoration:none}
+.scrollcue .caps{font-size:12.5px;letter-spacing:.22em}
+.scrollcue svg{animation:pd-bob 1.8s ease-in-out infinite}
+.scrollcue:hover,.scrollcue:focus-visible{color:var(--hl)}
+.step:not(:last-child) .stepcard::after{content:"Keep scrolling \2193";display:block;margin-top:14px;font-family:var(--caps);font-weight:600;font-size:12px;letter-spacing:.16em;color:var(--muted)}
+@keyframes pd-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+.jumpmap{position:fixed;right:22px;bottom:24px;z-index:40;display:flex;align-items:center;gap:12px;
+  padding:12px 18px 12px 14px;background:var(--ink);color:var(--paper);text-decoration:none;
+  border:1px solid var(--ink);outline:2px double rgba(235,227,205,.45);outline-offset:-6px;
+  box-shadow:0 10px 26px rgba(42,34,25,.28);transition:transform .2s ease,background .2s ease}
+.jumpmap[hidden]{display:none}
+.jumpmap span{display:flex;flex-direction:column;line-height:1.2}
+.jumpmap b{font-family:var(--caps);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.jumpmap small{font-size:13.5px;opacity:.85;margin-top:3px}
+.jumpmap:hover,.jumpmap:focus-visible{transform:translateY(-2px);background:var(--hl);border-color:var(--hl);color:#fff}
+.jumpmap:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@media (max-width:640px){
+  .jumpmap{left:12px;right:12px;bottom:12px;justify-content:center;padding:10px 14px}
+  .jumpmap small{font-size:12.5px}
+}
+@media (prefers-reduced-motion:reduce){.scrollcue svg{animation:none}.jumpmap{transition:none}}
