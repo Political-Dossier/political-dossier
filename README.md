@@ -7,9 +7,9 @@ Four instruments for reading the American political sky.
 | Path | Page |
 | --- | --- |
 | `/` | Homepage: hero and the Index of Plates |
-| `/dark-horse/` | Plate I: The Dark Horse Tracker |
-| `/think-tanks/` | Plate II: The Policy Ecosystem Atlas |
-| `/third-party/` | Plate III: Third-Party Performance |
+| `/dark-horse/` | Plate I: 2028 Dark Horse Tracker |
+| `/think-tanks/` | Plate II: Think Tank Atlas |
+| `/third-party/` | Plate III: 2026 Third Party Map |
 | `/drafts/` | Plate IV: coming soon (placeholder, not linked) |
 | `/assets/ledger.css` | Shared styles for every page |
 
@@ -21,9 +21,9 @@ Edit the data file to update a tool; the layout files rarely need to change.
 
 | Tool | Data | Layout and logic |
 | --- | --- | --- |
-| Dark Horse Tracker | `dark-horse/data.js` (people, statuses, weekly updates log) | `dark-horse/app.js`, `tracker.css` |
-| Policy Ecosystem Atlas | `think-tanks/data.js` (organizations, provinces, chronology, dispatches) | `think-tanks/app.js`, `atlas.css` |
-| Third-Party Performance | `third-party/data/races.json`, `third-party/data/status.json` | `third-party/app.js`, `races.css` |
+| 2028 Dark Horse Tracker | `dark-horse/data.js` (people, statuses, weekly updates log) | `dark-horse/app.js`, `tracker.css` |
+| Think Tank Atlas | `think-tanks/data.js` (organizations, provinces, chronology, dispatches) | `think-tanks/app.js`, `atlas.css` |
+| 2026 Third Party Map | `third-party/data/races.json`, `third-party/data/status.json` | `third-party/app.js`, `races.css` |
 
 Shared pieces: `assets/chrome.css` (top bar and footer on tool pages), `assets/ledger.css` (homepage and shell pages), `assets/vendor/d3.min.js` (d3 7.9.0, used by the Atlas).
 
