@@ -146,3 +146,13 @@ main.tool{background:var(--parchment);color:var(--ink);padding:56px 40px 80px;mi
 
 /* Logo mark */
 .pd-mark{display:block;flex:none}
+
+/* Email and X icons */
+.navlinks .soc{display:inline-flex;align-items:center;gap:10px;padding-left:22px;border-left:1px solid rgba(241,233,214,.25)}
+.navlinks .soc a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;padding:0;border:1px solid rgba(241,233,214,.4);border-radius:50%;color:var(--star)}
+.navlinks .soc a:hover,.navlinks .soc a:focus-visible{color:var(--gold);border-color:var(--gold)}
+.soc-foot{display:inline-flex;flex-wrap:wrap;gap:8px 22px}
+.soc-foot a{display:inline-flex;align-items:center;gap:8px;color:var(--star-muted);text-decoration:none;min-height:36px}
+.soc-foot a:hover,.soc-foot a:focus-visible{color:var(--gold)}
+@media (max-width:640px){.navlinks .soc{padding-left:0;border-left:none}}
+footer .wrap{align-items:center}

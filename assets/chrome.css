@@ -31,3 +31,13 @@
 
 /* Logo mark */
 .pd-mark{display:block;flex:none}
+
+/* Email and X icons */
+.dz-soc{display:inline-flex;align-items:center;gap:10px;padding-left:20px;border-left:1px solid rgba(241,233,214,.25)}
+.dz-links .dz-soc a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:1px solid rgba(241,233,214,.4);border-radius:50%;color:#F1E9D6}
+.dz-links .dz-soc a:hover,.dz-links .dz-soc a:focus-visible{color:#D2AB5F;border-color:#D2AB5F}
+.dz-soc-foot{display:inline-flex;flex-wrap:wrap;gap:8px 22px}
+.dz-colo .dz-soc-foot a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#D3C9B2;min-height:36px}
+.dz-colo .dz-soc-foot a:hover{color:#D2AB5F}
+@media (max-width:640px){.dz-soc{padding-left:0;border-left:none}}
+.dz-colo{align-items:center}
