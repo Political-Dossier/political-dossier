@@ -143,3 +143,6 @@ main.tool{background:var(--parchment);color:var(--ink);padding:56px 40px 80px;mi
   .plate.soon .idle{display:flex}
   .plate.soon .window{border-top-color:rgba(28,26,22,.2)}
 }
+
+/* Logo mark */
+.pd-mark{display:block;flex:none}
