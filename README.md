@@ -10,7 +10,7 @@ Four instruments for reading the American political sky.
 | `/dark-horse/` | Plate I: The Dark Horse Tracker |
 | `/think-tanks/` | Plate II: The Policy Ecosystem Atlas |
 | `/third-party/` | Plate III: Third-Party Performance |
-| `/drafts/` | Plate IV: The Draft Ledger |
+| `/drafts/` | Plate IV: coming soon (placeholder, not linked) |
 | `/assets/ledger.css` | Shared styles for every page |
 
 Plain HTML and CSS. No build step, no framework, no JavaScript on the shell pages.
